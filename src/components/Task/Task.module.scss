@@ -1,0 +1,22 @@
+
+.Task {
+	display: flex;
+	align-items: baseline;
+	word-break: break-all;
+	margin-bottom: .5rem;
+
+	&-prepend {
+		margin-right: 1.2rem;
+	
+		&--hyphen {
+			font-size: 1.4rem;
+			color: #007bff;
+		}
+
+		input {
+			cursor: pointer;
+			transform: scale(1.1);
+			margin-top: 0.6rem;
+		}
+	}
+}

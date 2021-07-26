@@ -1,0 +1,26 @@
+.App {
+	max-width: 114rem;
+	margin: 0 auto;
+	padding: 4rem;
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	margin-bottom: 2rem;
+
+
+	&-header{
+		color: #444;
+		font-size: 5rem;
+		letter-spacing: 1px;
+		word-spacing: 5px;
+		font-family: 'Yanone Kaffeesatz', sans-serif;
+		font-size: 6rem;
+		border-bottom: 5px solid gold;
+  	line-height: 0.9;
+	}
+
+	&-activeView {
+		width: 62rem;
+	}
+}

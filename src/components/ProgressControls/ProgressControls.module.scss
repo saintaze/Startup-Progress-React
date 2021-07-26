@@ -1,0 +1,28 @@
+.ProgressControls {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	margin: 4rem 0 7rem;
+
+	&-control {
+		width: 283px;
+		padding: 1rem 1.4rem;
+		border: 2px solid #bebebe;
+		border-radius: .25rem;
+		font-family: inherit;
+		font-size: 1.5rem;
+		color: inherit;
+		outline: none;
+		transition: all .3s;
+
+		&:first-child{
+			margin-bottom: 2rem;
+		}
+
+		&:focus, &:active {
+			border: 2px solid #7eb8e1;
+		}
+	}
+}

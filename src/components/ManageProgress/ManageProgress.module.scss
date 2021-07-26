@@ -1,0 +1,16 @@
+.ManageProgress {
+	text-align: center;
+
+	&-header {
+		text-align: center;
+		color: #444;
+		letter-spacing: 1px;
+		word-spacing: 4px;
+		font-family: 'Yanone Kaffeesatz', sans-serif;
+		font-size: 4rem;
+  	line-height: 0.9;
+		border-bottom: 5px solid pink;
+		display: inline-block;
+		margin-bottom: 6rem;
+	}
+}

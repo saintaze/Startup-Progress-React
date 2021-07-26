@@ -1,0 +1,57 @@
+.Alert {
+	min-height: 232px;
+  width: 600px;
+  position: fixed;
+  z-index: 20;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 3.5rem 3.4rem;
+	border-radius: 1.5px;
+	box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
+	padding-bottom: 3.9rem;
+
+
+	&-header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-bottom: 3.8rem;
+	}
+
+	&-title {
+		text-align: center;
+		color: #444;
+		letter-spacing: 1px;
+		word-spacing: 4px;
+		font-family: 'Yanone Kaffeesatz', sans-serif;
+		font-size: 3rem;
+  	line-height: 0.9;
+		font-weight: 500;
+		border-bottom: 4px solid #f9bbc6;
+		display: inline-block;
+	}
+
+	&-close {
+		color: #888;
+		cursor: pointer;
+		font-size: 2rem;
+
+		&:hover {
+			transition: all .2s;
+			color: #666;
+		}
+	}
+}
+
+
+.Backdrop {
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background-color: rgba($color: #000, $alpha: .7);
+	z-index: 10;
+}

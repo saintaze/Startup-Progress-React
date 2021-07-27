@@ -22,7 +22,7 @@ const Phase = ({phase, phaseNumber}) => {
 	}
 
 	const handleSelectPhase = e => {
-		if(e.target.type !== 'checkbox'){
+		if(e.target.type !== 'checkbox' && activeView === views.CREATE_PROGRESS){
 			dispatch(selectPhaseId(phase.id))
 		}
 	}

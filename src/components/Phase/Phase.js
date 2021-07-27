@@ -21,8 +21,14 @@ const Phase = ({phase, phaseNumber}) => {
 		}
 	}
 
+	const handleSelectPhase = e => {
+		if(e.target.type !== 'checkbox'){
+			dispatch(selectPhaseId(phase.id))
+		}
+	}
+
 	return (
-		<div className={classes.Phase} onClick={e => dispatch(selectPhaseId(phase.id))}>
+		<div className={classes.Phase} onClick={handleSelectPhase}>
 			<div className={classes['Phase-header']}>
 				<div className={classes['Phase-header--left']} >
 					<span className={classes['Phase-number']}>{phaseNumber}</span>

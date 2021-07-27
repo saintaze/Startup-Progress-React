@@ -1,15 +1,16 @@
 import React, { useEffect, useState } from  'react'
 import { useSelector } from 'react-redux'
+import { TransitionGroup } from 'react-transition-group'
 import views from '../../enums/view'
 import Phase from '../Phase/Phase'
+import Transition from '../Transition/Transition'
 
 const PhaseList = props => {
 
 	const allPhases = useSelector(state => state.phase.allPhases);
 	const activeView = useSelector(state => state.view.activeView);
 	const currentPhase = useSelector(state => state.phase.currentPhase);
-	const [phasesToShow, setPhasesToShow] = useState(allPhases)
-
+	const [phasesToShow, setPhasesToShow] = useState([]);
 
 	useEffect(() => {
 		if(activeView === views.CREATE_PROGRESS){
@@ -23,13 +24,17 @@ const PhaseList = props => {
 
 	const renderProgress = () => {
 		return phasesToShow.map((phase, idx) => 
-			<Phase key={phase.id} phase={phase} phaseNumber={idx + 1} />
+		 	<Transition key={phase.id}>
+				<Phase  phase={phase} phaseNumber={idx + 1} />
+			</Transition>
 		)
 	}
 
 	return (
 		<div>
-			{renderProgress()}
+			<TransitionGroup>
+				{renderProgress()}
+			</TransitionGroup>
 		</div>
 	)
 }

@@ -26,7 +26,7 @@ function App() {
 	}
 	
 	useEffect(() => {
-		const allPhasesCompleted = allPhases.length && allPhases.every(phase => phase.isCompleted);
+		const allPhasesCompleted = activeView === views.MANAGE_PROGRESS && allPhases.length && allPhases.every(phase => phase.isCompleted);
 		if(allPhasesCompleted) {
 			(async () => {
 				const fact = await fetchRandomFact();
@@ -34,7 +34,7 @@ function App() {
 				dispatch(setShowAlert(alertPayload));
 			})()
 		}
-	}, [allPhases, dispatch])
+	}, [allPhases, activeView, dispatch])
 
   return (
     <div className={classes.App}>

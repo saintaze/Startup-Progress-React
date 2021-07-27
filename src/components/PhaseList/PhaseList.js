@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from  'react'
 import { useSelector } from 'react-redux'
-import { TransitionGroup } from 'react-transition-group'
 import views from '../../enums/view'
-import Transition from '../Transition/Transition'
 import Phase from '../Phase/Phase'
 
 const PhaseList = props => {
@@ -25,18 +23,13 @@ const PhaseList = props => {
 
 	const renderProgress = () => {
 		return phasesToShow.map((phase, idx) => 
-			// <Transition key={phase.id}>
-				<Phase key={phase.id} phase={phase} phaseNumber={idx + 1} />
-			//  </Transition>
+			<Phase key={phase.id} phase={phase} phaseNumber={idx + 1} />
 		)
 	}
 
-
 	return (
 		<div>
-			{/* <TransitionGroup> */}
-				{renderProgress()}
-			{/* </TransitionGroup> */}
+			{renderProgress()}
 		</div>
 	)
 }
